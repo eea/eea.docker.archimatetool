@@ -1,0 +1,13 @@
+archimatetool:
+  build: archimatetool
+
+  labels:
+    io.rancher.scheduler.affinity:host_label: changeme
+
+  volumes:
+    - archimate_home:/home/developer
+    - /tmp/.X11-unix:/tmp/.X11-unix
+
+  environment:
+    - DISPLAY=$DISPLAY
+
